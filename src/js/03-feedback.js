@@ -8,14 +8,33 @@ const refs = {
 };
 
 refs.form.addEventListener('submit', onFormSubmit);
-refs.message.addEventListener('input', throttle(onTextareaInput, 200));
-let dataValue = {};
+refs.form.addEventListener('input', throttle(onFormInput, 500));
+
+let formData = {};
+
+populateMessage();
 
 function onFormSubmit(e) {
   e.preventDefault();
-  // const { value } = e.target.elements.text;
 
-  localStorage.setItem(refs.feedback, JSON.stringify(e.currentTarget.value));
+  e.currentTarget.reset();
+  localStorage.removeItem(refs.feedback);
+  console.log(formData);
 }
 
-function onTextareaInput(e) {}
+function populateMessage() {
+  const savedMessage = JSON.parse(localStorage.getItem(refs.feedback));
+
+  if (savedMessage === null || savedMessage === undefined) {
+    return;
+  }
+  formData = savedMessage;
+
+  refs.message.value = savedMessage.message;
+  refs.email.value = savedMessage.email;
+}
+
+function onFormInput(e) {
+  formData[e.target.name] = e.target.value;
+  localStorage.setItem(refs.feedback, JSON.stringify(formData));
+}
