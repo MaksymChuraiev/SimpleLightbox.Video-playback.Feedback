@@ -19,7 +19,10 @@ function onFormSubmit(e) {
 
   e.currentTarget.reset();
   localStorage.removeItem(refs.feedback);
+
   console.log(formData);
+
+  formData = {};
 }
 
 function populateMessage() {
@@ -30,8 +33,8 @@ function populateMessage() {
   }
   formData = savedMessage;
 
-  refs.message.value = savedMessage.message;
-  refs.email.value = savedMessage.email;
+  refs.email.value = savedMessage.email ? savedMessage.email : refs.email.value;
+  refs.message.value = savedMessage.message ? savedMessage.message : refs.message.value;
 }
 
 function onFormInput(e) {
