@@ -5,15 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SimpleLightbox library</title>
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/01-gallery.css" />
+
+    <link rel="stylesheet" href="./sass/gallery.scss" />
   </head>
   <body>
-    <p><a href="index.html">Go back</a></p>
-
-    <!-- Add gallery items to this list -->
-    <div class="gallery"></div>
-
+    <header class="header">
+      <p class="back-link">
+        <a class="main-link gallery-link" href="index.html">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Go back
+        </a>
+      </p>
+    </header>
+    <main>
+      <!-- Add gallery items to this list -->
+      <div class="gallery"></div>
+    </main>
     <script src="js/01-gallery.js"></script>
   </body>
 </html>
