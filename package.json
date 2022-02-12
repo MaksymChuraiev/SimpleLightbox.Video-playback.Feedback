@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://MaksymChuraiev.github.io/goit-js-hw-08",
+  "homepage": "https://MaksymChuraiev.github.io/SimpleLightbox.Video-playback.Feedback",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
+    "build": "parcel build src/*.html --public-url /SimpleLightbox.Video-playback.Feedback/"
   },
   "repository": {
     "type": "git",
