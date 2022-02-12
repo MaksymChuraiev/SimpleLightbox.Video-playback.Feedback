@@ -4,4 +4,4 @@ var t=arguments[3],n="Expected a function",e=NaN,i="[object Symbol]",r=/^\s+|\s+
 },{}],"TTyb":[function(require,module,exports) {
 "use strict";var e=t(require("lodash.throttle"));function t(e){return e&&e.__esModule?e:{default:e}}const a={form:document.querySelector(".feedback-form"),email:document.querySelector(".feedback-form input"),message:document.querySelector(".feedback-form textarea"),feedback:"feedback-form-state"};a.form.addEventListener("submit",o),a.form.addEventListener("input",(0,e.default)(u,500));let r={};function o(e){e.preventDefault(),e.currentTarget.reset(),localStorage.removeItem(a.feedback),console.log(r),r={}}function l(){const e=JSON.parse(localStorage.getItem(a.feedback));null!=e&&(r=e,a.email.value=e.email?e.email:a.email.value,a.message.value=e.message?e.message:a.message.value)}function u(e){r[e.target.name]=e.target.value,localStorage.setItem(a.feedback,JSON.stringify(r))}l();
 },{"lodash.throttle":"FNyO"}]},{},["TTyb"], null)
-//# sourceMappingURL=/goit-js-hw-08/03-feedback.c25ca8b0.js.map
+//# sourceMappingURL=/SimpleLightbox.Video-playback.Feedback/03-feedback.c25ca8b0.js.map
