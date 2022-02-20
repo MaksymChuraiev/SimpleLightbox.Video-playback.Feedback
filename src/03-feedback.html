@@ -21,15 +21,18 @@
     </header>
 
     <form class="feedback-form" autocomplete="off">
-      <label>
-        Email
-        <input type="email" name="email" autofocus />
-      </label>
-      <label>
-        Message
-        <textarea name="message" rows="8"></textarea>
-      </label>
-      <button type="submit">Submit</button>
+      <h2>Feedback</h2>
+      <div class="input-outside">
+        <div class="input-box">
+          <label>Email</label>
+          <input type="email" name="email" autofocus placeholder="example@xyz.com" />
+        </div>
+        <div class="input-box">
+          <label>Message</label>
+          <textarea name="message" rows="6" placeholder="your message"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </div>
     </form>
 
     <script src="js/03-feedback.js"></script>
